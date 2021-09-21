@@ -15,12 +15,17 @@ def talk(text):
     speaker.say(text)
     speaker.runAndWait()
     
-talk("Hi, These is Jarvis, How can I help you ?")
+talk("Hi, These is Personal Voice Assistant using python, How can I help you ?")
+print("Things I can doo...")
+print("1. Can play song/video in YT : Play song/video name...")
+print("2. Can tell time : What is the time...")
+print("3. Can give information using Wiki : Search thing/topic name...")
+print("4. Can entertain you using jokes : Tell me a joke...")
 
 def talk_command():
     try:
         with sr.Microphone() as source:
-            print("Listening.....")
+            print("Your PVA is Listening.....\nWaiting for your Request")
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
             command = command.lower()
